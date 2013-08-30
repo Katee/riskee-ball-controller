@@ -1,0 +1,13 @@
+{
+  "name": "rb-controller",
+  "description": "Web control panel for the Riskee Ball boards.",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "*",
+    "connect": "2.x",
+    "serialport ": "1.x",
+    "socket.io": "0.9.13"
+  },
+  "keywords": ["arduino", "websockets", "fire", "serial"]
+}
