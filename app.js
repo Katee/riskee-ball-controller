@@ -26,14 +26,10 @@ app.configure(function(){
   app.use(express['static']('public'));
 });
 
-
 var arduino = new SerialPort(options.serialDevice, {baudrate: options.baudrate, parser: serialport.parsers.readline("\n")});
 
 var io = require('socket.io').listen(server);
 io.disable('log');
-
-var lastUpdate = 0;
-
 
 arduino.on("data", function (msg) {
   console.log(msg);
