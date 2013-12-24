@@ -7,7 +7,8 @@
     "express": "*",
     "connect": "2.x",
     "serialport ": "1.x",
-    "socket.io": "0.9.13"
+    "socket.io": "0.9.13",
+    "tinycolor2": "0.9.9"
   },
   "keywords": ["arduino", "websockets", "fire", "serial"]
 }
