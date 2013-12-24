@@ -5,6 +5,8 @@ var serialport = require("serialport");
 var SerialPort = serialport.SerialPort;
 var tinycolor = require("tinycolor2");
 
+var numLanes = 10;
+
 try {
   var options = require('./options');
 } catch(e) {
@@ -52,7 +54,7 @@ app.get('/start', function(req, res) {
 
 function startLane(laneId) {
   if (laneId === "*") {
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < numLanes; i++) {
       if (i == 9) {
         sendToBoard('A' + 'S');
       } else {
