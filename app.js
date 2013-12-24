@@ -9,7 +9,7 @@ try {
   var options = require('./options');
 } catch(e) {
   console.log('Could not include options.js, did you make it yet?');
-  return;
+  process.exit();
 }
 
 var app = express();
