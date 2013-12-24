@@ -4,7 +4,6 @@ var connect = require('connect');
 var serialport = require("serialport");
 var SerialPort = serialport.SerialPort;
 var tinycolor = require("tinycolor2");
-require('sugar');
 
 try {
   var options = require('./options');
