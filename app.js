@@ -14,7 +14,7 @@ try {
 
 var app = express();
 var server = http.createServer(app).listen(options.port, function(){
-  console.log("Riskee Ball started on port %s", options.port);
+  console.log("Riskee Ball started at http://localhost:%s", options.port);
 });
 
 app.configure(function(){
