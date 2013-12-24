@@ -12,11 +12,7 @@ $(function() {
   // Start all lanes
   $('#all').on('click', function(){
     for (var i = 0; i < 10; i++) {
-      if (i == 9) {
-        socket.emit('start', "A");
-      } else {
-        socket.emit('start', i + 1);
-      }
+      socket.emit('start', indexToLaneId(i));
     }
     showMessage('Starting All Lanes');
     return false;
@@ -27,3 +23,9 @@ function showMessage(message) {
   $('#message .text').text(message);
 }
 
+function indexToLaneId(i) {
+  if (i == 9) {
+    return "A";
+  }
+  return (i + 1).toString();
+}
