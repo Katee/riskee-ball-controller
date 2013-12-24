@@ -72,5 +72,6 @@ function indexToLaneId(i) {
 function sendToBoard(msg) {
   console.log('writing message: "%s"', msg);
   arduino.write(msg);
+  // send the message again offset by a byte
   arduino.write(' '+msg);
 }
