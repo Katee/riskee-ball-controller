@@ -55,15 +55,18 @@ app.get('/start', function(req, res) {
 function startLane(laneId) {
   if (laneId === "*") {
     for (var i = 0; i < numLanes; i++) {
-      if (i == 9) {
-        sendToBoard('A' + 'S');
-      } else {
-        sendToBoard(i + 'S');
-      }
+      sendToBoard(indexToLaneId(i) + 'S');
     }
   } else {
     sendToBoard(laneId + 'S');
   }
+}
+
+function indexToLaneId(i) {
+  if (i == 9) {
+    return "A";
+  }
+  return (i + 1).toString();
 }
 
 function sendToBoard(msg) {
